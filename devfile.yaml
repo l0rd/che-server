@@ -4,7 +4,10 @@ metadata:
 components:
   - container:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
-      memoryLimit: 12Gi
+      memoryRequest: 2Gi
+      memoryLimit: 8Gi
+      cpuRequest: '1'
+      cpuLimit: '2'
       mountSources: true
       volumeMounts:
         - name: m2
